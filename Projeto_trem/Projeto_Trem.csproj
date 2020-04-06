@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A37CF06-506D-440D-89DA-CC0578C60BEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto_Trem</RootNamespace>
+    <AssemblyName>Projeto_Trem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classe_das_passagens.cs" />
+    <Compile Include="Classe_da_telaFinal.cs" />
+    <Compile Include="Classe_de_Pagamento.cs" />
+    <Compile Include="Classe_dos_destinos.cs" />
+    <Compile Include="EscolhaDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EscolhaDestino.Designer.cs">
+      <DependentUpon>EscolhaDestino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EscolhaEmbarque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EscolhaEmbarque.Designer.cs">
+      <DependentUpon>EscolhaEmbarque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Horarios_Passagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Horarios_Passagem.Designer.cs">
+      <DependentUpon>Horarios_Passagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagamento_passagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagamento_passagem.Designer.cs">
+      <DependentUpon>Pagamento_passagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_final.Designer.cs">
+      <DependentUpon>Tela_final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_Inicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_Inicial.Designer.cs">
+      <DependentUpon>Tela_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EscolhaDestino.resx">
+      <DependentUpon>EscolhaDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EscolhaEmbarque.resx">
+      <DependentUpon>EscolhaEmbarque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Horarios_Passagem.resx">
+      <DependentUpon>Horarios_Passagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagamento_passagem.resx">
+      <DependentUpon>Pagamento_passagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_final.resx">
+      <DependentUpon>Tela_final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_Inicial.resx">
+      <DependentUpon>Tela_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
